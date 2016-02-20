@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.Button btnReset;
             this.btnDeal = new System.Windows.Forms.Button();
             this.listDisplay = new System.Windows.Forms.ListBox();
+            btnReset = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnDeal
@@ -53,12 +55,24 @@
             this.listDisplay.Size = new System.Drawing.Size(405, 500);
             this.listDisplay.TabIndex = 0;
             // 
+            // btnReset
+            // 
+            btnReset.Location = new System.Drawing.Point(51, 331);
+            btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            btnReset.Name = "btnReset";
+            btnReset.Size = new System.Drawing.Size(195, 52);
+            btnReset.TabIndex = 2;
+            btnReset.Text = "Reset ";
+            btnReset.UseVisualStyleBackColor = true;
+            btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OliveDrab;
             this.ClientSize = new System.Drawing.Size(764, 538);
+            this.Controls.Add(btnReset);
             this.Controls.Add(this.btnDeal);
             this.Controls.Add(this.listDisplay);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

@@ -16,6 +16,7 @@ namespace CardDealer
             //come back to this
             cards = new List<Card>();
             InitializeCards();
+            shuffleDeck();
         }
 
         public void InitializeCards()
@@ -28,7 +29,7 @@ namespace CardDealer
                 }
             }
         }
-
+        //Need to refactor now that we are passing in a list box, no need to store a list of hands, etc
         public void Deal(ListBox listBox, int numHands, int handSize)
         {
             int positionInDeck = 0;
@@ -47,7 +48,25 @@ namespace CardDealer
             }
             foreach (Hand hand in hands)
             {
+                listBox.Items.Add("H A N D :");
                 listBox.Items.Add(hand.toString());
+                listBox.Items.Add("");
+            }
+        }
+
+        public void shuffleDeck()
+        {
+            int numShuffles = 113;
+            int maxCards = cards.Count()-1; //-1 cause 0 based
+            Random random = new Random();
+            for (int i = 0; i < numShuffles; i++)
+            {
+                int origin = random.Next(0, maxCards);
+                int destination = random.Next(0, maxCards);
+
+                Card tempCard = cards[origin];
+                cards[origin] = cards[destination];
+                cards[destination] = tempCard;
             }
         }
     }

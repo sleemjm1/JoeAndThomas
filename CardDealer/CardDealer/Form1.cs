@@ -29,8 +29,11 @@ namespace CardDealer
         {
             Deck deck = new Deck();
             deck.Deal(listDisplay, 7, 3);
-            
-            
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            listDisplay.Items.Clear();
         }
     }
 }
