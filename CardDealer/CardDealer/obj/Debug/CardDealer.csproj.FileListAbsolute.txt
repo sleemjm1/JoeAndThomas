@@ -1,0 +1,1 @@
+\\vmware-host\shared folders\documents\visual studio 2013\Projects\CardDealer\CardDealer\bin\Debug\CardDealer.exe.config
