@@ -9,26 +9,47 @@ namespace CardDealer
     class Deck
     {
         //private List<Card> cards = new List<Card>();
-        private Card[] cards;
-        public Deck(Card[] cards)
+        private List<Card> cards;
+        public Deck()
         {
             //come back to this
+            cards = new List<Card>();
+            InitializeCards();
         }
 
         public void InitializeCards()
         {
-            int maxCards = 52;
-            int maxCardsPerSuit = 13;
-            int maxSuits = 4;
-            string currentSuit;
-
-            for (int cs = 0; cc < maxCards; cc++)
+            foreach (Suit suit in Enum.GetValues(typeof(Suit)))
             {
-                for (int i = 0; i < maxCardsPerSuit; i++)
+                foreach (Value value in Enum.GetValues(typeof(Value)))
                 {
-                    cards[cc].cardValue =;
+                    cards.Add(new Card(value, suit));
                 }
             }
+        }
+
+        public string Deal(int numHands, int handSize)
+        {
+            int positionInDeck = 0;
+            List<Hand> hands = new List<Hand>();
+            for (int i = 0; i < numHands; i++)
+            {
+                List<Card> cardsToDeal = new List<Card>();
+                for (int c = positionInDeck; c < (positionInDeck + handSize); c++)
+                {
+                    Card currentCard = cards[c];
+                    cardsToDeal.Add(currentCard);
+                }
+                Hand currentHand = new Hand(cardsToDeal);
+                hands.Add(currentHand);
+                positionInDeck += handSize;
+            }
+            string returnString ="";
+            foreach (Hand hand in hands)
+            {
+                returnString += hand.toString();
+            }
+            return returnString;
         }
     }
 }

@@ -8,6 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/* To Do:
+ * New line after cards
+ * Shuffle method
+ * 
+*/
+
 namespace CardDealer
 {
     public partial class Form1 : Form
@@ -19,7 +25,9 @@ namespace CardDealer
 
         private void btnDeal_Click(object sender, EventArgs e)
         {
-
+            Deck deck = new Deck();
+            string cardsDealt = deck.Deal(5, 5);
+            listDisplay.Items.Add(cardsDealt);
         }
     }
 }
