@@ -11,7 +11,9 @@ using System.Windows.Forms;
 /* To Do:
  * New line after cards
  * Shuffle method
- * 
+ * Implement card games
+ * Add images to cards
+ * Let user choose size of hands 
 */
 
 namespace CardDealer
@@ -26,8 +28,9 @@ namespace CardDealer
         private void btnDeal_Click(object sender, EventArgs e)
         {
             Deck deck = new Deck();
-            string cardsDealt = deck.Deal(5, 5);
-            listDisplay.Items.Add(cardsDealt);
+            deck.Deal(listDisplay, 7, 3);
+            
+            
         }
     }
 }

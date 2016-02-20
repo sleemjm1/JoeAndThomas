@@ -68,7 +68,7 @@ namespace CardDealer
 
         public string toString()
         {
-            string returnString = this.CardValue + " of " + this.CardSuit + " ";
+            string returnString = this.CardValue + " of " + this.CardSuit + "\r\n ";
             return returnString;
         }
 

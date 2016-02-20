@@ -25,7 +25,7 @@ namespace CardDealer
             string returnString = "";
             foreach (Card card in cards)
             {
-                returnString += card.toString() +"\n";
+                returnString += card.toString() + " ";
             }
             return returnString;
         }

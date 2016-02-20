@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CardDealer
 {
@@ -28,7 +29,7 @@ namespace CardDealer
             }
         }
 
-        public string Deal(int numHands, int handSize)
+        public void Deal(ListBox listBox, int numHands, int handSize)
         {
             int positionInDeck = 0;
             List<Hand> hands = new List<Hand>();
@@ -44,12 +45,10 @@ namespace CardDealer
                 hands.Add(currentHand);
                 positionInDeck += handSize;
             }
-            string returnString ="";
             foreach (Hand hand in hands)
             {
-                returnString += hand.toString();
+                listBox.Items.Add(hand.toString());
             }
-            return returnString;
         }
     }
 }
