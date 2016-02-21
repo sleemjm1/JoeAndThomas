@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 /* To Do:
  * Implement card games
- * Fix validation for when user would add a string instead of number to one of the text boxes
+ * Fix validation for when user adds a string instead of number to one of the text boxes
  *  
 */
 

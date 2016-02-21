@@ -40,10 +40,10 @@
             // 
             // btnDeal
             // 
-            this.btnDeal.Location = new System.Drawing.Point(16, 138);
-            this.btnDeal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDeal.Location = new System.Drawing.Point(24, 215);
+            this.btnDeal.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnDeal.Name = "btnDeal";
-            this.btnDeal.Size = new System.Drawing.Size(111, 34);
+            this.btnDeal.Size = new System.Drawing.Size(167, 52);
             this.btnDeal.TabIndex = 1;
             this.btnDeal.Text = "Deal Cards";
             this.btnDeal.UseVisualStyleBackColor = true;
@@ -52,19 +52,19 @@
             // listDisplay
             // 
             this.listDisplay.FormattingEnabled = true;
-            this.listDisplay.ItemHeight = 16;
-            this.listDisplay.Location = new System.Drawing.Point(337, 18);
-            this.listDisplay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listDisplay.ItemHeight = 25;
+            this.listDisplay.Location = new System.Drawing.Point(505, 28);
+            this.listDisplay.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.listDisplay.Name = "listDisplay";
-            this.listDisplay.Size = new System.Drawing.Size(405, 500);
+            this.listDisplay.Size = new System.Drawing.Size(605, 779);
             this.listDisplay.TabIndex = 0;
             // 
             // btnReset
             // 
-            btnReset.Location = new System.Drawing.Point(135, 138);
-            btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            btnReset.Location = new System.Drawing.Point(203, 215);
+            btnReset.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             btnReset.Name = "btnReset";
-            btnReset.Size = new System.Drawing.Size(111, 34);
+            btnReset.Size = new System.Drawing.Size(167, 52);
             btnReset.TabIndex = 2;
             btnReset.Text = "Reset ";
             btnReset.UseVisualStyleBackColor = true;
@@ -72,42 +72,46 @@
             // 
             // txtNumHands
             // 
-            this.txtNumHands.Location = new System.Drawing.Point(142, 52);
+            this.txtNumHands.Location = new System.Drawing.Point(214, 81);
+            this.txtNumHands.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtNumHands.Name = "txtNumHands";
-            this.txtNumHands.Size = new System.Drawing.Size(104, 22);
+            this.txtNumHands.Size = new System.Drawing.Size(154, 30);
             this.txtNumHands.TabIndex = 3;
             // 
             // txtNumCards
             // 
-            this.txtNumCards.Location = new System.Drawing.Point(142, 92);
+            this.txtNumCards.Location = new System.Drawing.Point(214, 144);
+            this.txtNumCards.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtNumCards.Name = "txtNumCards";
-            this.txtNumCards.Size = new System.Drawing.Size(104, 22);
+            this.txtNumCards.Size = new System.Drawing.Size(154, 30);
             this.txtNumCards.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 52);
+            this.label1.Location = new System.Drawing.Point(19, 81);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 17);
+            this.label1.Size = new System.Drawing.Size(170, 25);
             this.label1.TabIndex = 5;
             this.label1.Text = "Number of Hands:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 97);
+            this.label2.Location = new System.Drawing.Point(19, 151);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 17);
+            this.label2.Size = new System.Drawing.Size(156, 25);
             this.label2.TabIndex = 6;
             this.label2.Text = "Cards per Hand:";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OliveDrab;
-            this.ClientSize = new System.Drawing.Size(764, 538);
+            this.ClientSize = new System.Drawing.Size(1146, 840);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNumCards);
@@ -115,7 +119,8 @@
             this.Controls.Add(btnReset);
             this.Controls.Add(this.btnDeal);
             this.Controls.Add(this.listDisplay);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.Name = "Form1";
             this.Text = "Card Dealer Deluxe 2.0";
             this.ResumeLayout(false);
