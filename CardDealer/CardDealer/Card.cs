@@ -68,7 +68,44 @@ namespace CardDealer
 
         public string toString()
         {
-            string returnString = this.CardValue + " of " + this.CardSuit + "\r\n ";
+            string returnString = this.CardValue + " of " + this.CardSuit + " ";
+            return returnString;
+        }
+
+        public string shortString()
+        {
+            string returnString = "";
+            string returnCardValue = "";
+            string returnCardSuit = "";
+            //if (this.CardSuit == Suit.Hearts)
+            //{
+            //    returnString = this.CardValue + "♥" + " ";
+            //}
+            //else
+            //{
+            //    returnString = this.CardValue + " of " + this.CardSuit + " ";
+            //}
+            if (this.CardSuit == Suit.Hearts) { returnCardSuit = "♥"; }
+            else if (this.CardSuit == Suit.Spades) { returnCardSuit = "♠"; }
+            else if (this.CardSuit == Suit.Clubs) { returnCardSuit = "♣"; }
+            else { returnCardSuit = "♦"; }
+
+            if (this.CardValue == Value.Ace) { returnCardValue = "A"; }
+            else if (this.CardValue == Value.Two) { returnCardValue = "2"; }
+            else if (this.CardValue == Value.Three) { returnCardValue = "3"; }
+            else if (this.CardValue == Value.Four) { returnCardValue = "4"; }
+            else if (this.CardValue == Value.Five) { returnCardValue = "5"; }
+            else if (this.CardValue == Value.Six) { returnCardValue = "6"; }
+            else if (this.CardValue == Value.Seven) { returnCardValue = "7"; }
+            else if (this.CardValue == Value.Eight) { returnCardValue = "8"; }
+            else if (this.CardValue == Value.Nine) { returnCardValue = "9"; }
+            else if (this.CardValue == Value.Ten) { returnCardValue = "T"; }
+            else if (this.CardValue == Value.Jack) { returnCardValue = "J"; }
+            else if (this.CardValue == Value.Queen) { returnCardValue = "Q"; }
+            else { returnCardValue = "K"; }
+
+            returnString = returnCardValue + returnCardSuit + "";
+
             return returnString;
         }
 

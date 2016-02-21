@@ -28,7 +28,7 @@ namespace CardDealer
         private void btnDeal_Click(object sender, EventArgs e)
         {
             Deck deck = new Deck();
-            deck.Deal(listDisplay, 7, 3);
+            deck.Deal(listDisplay, 5, 3);
         }
 
         private void btnReset_Click(object sender, EventArgs e)
