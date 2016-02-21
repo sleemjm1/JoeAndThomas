@@ -40,10 +40,10 @@
             // 
             // btnDeal
             // 
-            this.btnDeal.Location = new System.Drawing.Point(51, 146);
+            this.btnDeal.Location = new System.Drawing.Point(16, 138);
             this.btnDeal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDeal.Name = "btnDeal";
-            this.btnDeal.Size = new System.Drawing.Size(195, 52);
+            this.btnDeal.Size = new System.Drawing.Size(111, 34);
             this.btnDeal.TabIndex = 1;
             this.btnDeal.Text = "Deal Cards";
             this.btnDeal.UseVisualStyleBackColor = true;
@@ -61,10 +61,10 @@
             // 
             // btnReset
             // 
-            btnReset.Location = new System.Drawing.Point(51, 225);
+            btnReset.Location = new System.Drawing.Point(135, 138);
             btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             btnReset.Name = "btnReset";
-            btnReset.Size = new System.Drawing.Size(195, 52);
+            btnReset.Size = new System.Drawing.Size(111, 34);
             btnReset.TabIndex = 2;
             btnReset.Text = "Reset ";
             btnReset.UseVisualStyleBackColor = true;
