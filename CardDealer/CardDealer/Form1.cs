@@ -27,8 +27,20 @@ namespace CardDealer
 
         private void btnDeal_Click(object sender, EventArgs e)
         {
-            Deck deck = new Deck();
-            deck.Deal(listDisplay, 5, 3);
+            int numHands = Int32.Parse(txtNumHands.Text);
+            int numCards = Int32.Parse(txtNumCards.Text);
+            int totalCards = numCards * numHands;
+            int maxCards = 52;
+
+            if (totalCards > maxCards)
+            {
+                listDisplay.Items.Add("Unable to deal that many cards at once!");
+            }
+            else
+            {
+                Deck deck = new Deck();
+                deck.Deal(listDisplay, numHands, numCards); //Deal(listBox, numHands, handSize)
+            }
         }
 
         private void btnReset_Click(object sender, EventArgs e)

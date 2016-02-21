@@ -77,14 +77,7 @@ namespace CardDealer
             string returnString = "";
             string returnCardValue = "";
             string returnCardSuit = "";
-            //if (this.CardSuit == Suit.Hearts)
-            //{
-            //    returnString = this.CardValue + "♥" + " ";
-            //}
-            //else
-            //{
-            //    returnString = this.CardValue + " of " + this.CardSuit + " ";
-            //}
+            
             if (this.CardSuit == Suit.Hearts) { returnCardSuit = "♥"; }
             else if (this.CardSuit == Suit.Spades) { returnCardSuit = "♠"; }
             else if (this.CardSuit == Suit.Clubs) { returnCardSuit = "♣"; }

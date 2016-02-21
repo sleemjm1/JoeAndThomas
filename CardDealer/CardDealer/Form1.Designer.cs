@@ -31,12 +31,16 @@
             System.Windows.Forms.Button btnReset;
             this.btnDeal = new System.Windows.Forms.Button();
             this.listDisplay = new System.Windows.Forms.ListBox();
+            this.txtNumHands = new System.Windows.Forms.TextBox();
+            this.txtNumCards = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             btnReset = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnDeal
             // 
-            this.btnDeal.Location = new System.Drawing.Point(51, 242);
+            this.btnDeal.Location = new System.Drawing.Point(51, 146);
             this.btnDeal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDeal.Name = "btnDeal";
             this.btnDeal.Size = new System.Drawing.Size(195, 52);
@@ -57,7 +61,7 @@
             // 
             // btnReset
             // 
-            btnReset.Location = new System.Drawing.Point(51, 331);
+            btnReset.Location = new System.Drawing.Point(51, 225);
             btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             btnReset.Name = "btnReset";
             btnReset.Size = new System.Drawing.Size(195, 52);
@@ -66,12 +70,48 @@
             btnReset.UseVisualStyleBackColor = true;
             btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
+            // txtNumHands
+            // 
+            this.txtNumHands.Location = new System.Drawing.Point(142, 52);
+            this.txtNumHands.Name = "txtNumHands";
+            this.txtNumHands.Size = new System.Drawing.Size(104, 22);
+            this.txtNumHands.TabIndex = 3;
+            // 
+            // txtNumCards
+            // 
+            this.txtNumCards.Location = new System.Drawing.Point(142, 92);
+            this.txtNumCards.Name = "txtNumCards";
+            this.txtNumCards.Size = new System.Drawing.Size(104, 22);
+            this.txtNumCards.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(123, 17);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Number of Hands:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 97);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(112, 17);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Cards per Hand:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OliveDrab;
             this.ClientSize = new System.Drawing.Size(764, 538);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtNumCards);
+            this.Controls.Add(this.txtNumHands);
             this.Controls.Add(btnReset);
             this.Controls.Add(this.btnDeal);
             this.Controls.Add(this.listDisplay);
@@ -79,6 +119,7 @@
             this.Name = "Form1";
             this.Text = "Card Dealer Deluxe 2.0";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -86,6 +127,10 @@
 
         private System.Windows.Forms.Button btnDeal;
         private System.Windows.Forms.ListBox listDisplay;
+        private System.Windows.Forms.TextBox txtNumHands;
+        private System.Windows.Forms.TextBox txtNumCards;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

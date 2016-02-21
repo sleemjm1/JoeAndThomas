@@ -46,9 +46,10 @@ namespace CardDealer
                 hands.Add(currentHand);
                 positionInDeck += handSize;
             }
+            listBox.Items.Add("Dealing hands..");
+            listBox.Items.Add("");
             foreach (Hand hand in hands)
             {
-                listBox.Items.Add("H A N D :");
                 listBox.Items.Add(hand.toString());
                 listBox.Items.Add("");
             }
