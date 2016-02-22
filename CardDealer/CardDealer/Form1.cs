@@ -47,7 +47,10 @@ namespace CardDealer
             }
             
             int totalCards = numCards * numHands;
-            int maxCards = 52;
+            int maxCards = 52; 
+
+            //We need to check that it is possible to perform a deal with the parameters supplied by
+            //the user. We need less than maxCards (52), and more than 0 cards in order to perform a deal
 
             if (totalCards > maxCards || totalCards < 0)
             {
@@ -65,6 +68,13 @@ namespace CardDealer
             listDisplay.Items.Clear();
             txtNumCards.Text = String.Empty;
             txtNumHands.Text = String.Empty;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            listSlots.Items.Clear();
+            Slots slots = new Slots();
+            slots.Roll(listSlots);
         }
     }
 }
