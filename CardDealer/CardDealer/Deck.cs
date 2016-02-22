@@ -34,6 +34,7 @@ namespace CardDealer
         {
             int positionInDeck = 0;
             List<Hand> hands = new List<Hand>();
+            int handCount = 0;
             for (int i = 0; i < numHands; i++)
             {
                 List<Card> cardsToDeal = new List<Card>();
@@ -46,10 +47,11 @@ namespace CardDealer
                 hands.Add(currentHand);
                 positionInDeck += handSize;
             }
-            listBox.Items.Add("Dealing hands..");
             listBox.Items.Add("");
             foreach (Hand hand in hands)
             {
+                handCount++;
+                listBox.Items.Add("Hand no. " + handCount);
                 listBox.Items.Add(hand.toString());
                 listBox.Items.Add("");
             }

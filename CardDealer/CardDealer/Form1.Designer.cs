@@ -92,9 +92,9 @@
             this.label1.Location = new System.Drawing.Point(19, 81);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 25);
+            this.label1.Size = new System.Drawing.Size(131, 25);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Number of Hands:";
+            this.label1.Text = "No. of Hands:";
             // 
             // label2
             // 

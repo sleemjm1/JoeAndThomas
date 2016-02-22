@@ -25,27 +25,25 @@ namespace CardDealer
 
         private void btnDeal_Click(object sender, EventArgs e)
         {
-            int numHands;
-            int numCards;
+            int numHands = 0;
+            int numCards = 0;
 
-            if (txtNumHands.Text != "")
+            try
             {
                 numHands = Int32.Parse(txtNumHands.Text);
             }
-            else
+            catch(FormatException)
             {
-                numHands = 4;
-                listDisplay.Items.Add("No amount of hands entered. Dealing default.");
+                MessageBox.Show("Only Numeric values accepted for No. of Cards", "Format Exception");
             }
-
-            if (txtNumCards.Text != "")
+            
+            try
             {
                 numCards = Int32.Parse(txtNumCards.Text);
             }
-            else
+            catch(FormatException)
             {
-                numCards = 13;
-                listDisplay.Items.Add("No amount of cards entered. Dealing default.");
+                MessageBox.Show("Only Numeric values accepted for Cards Per Hand", "Format Exception");
             }
             
             int totalCards = numCards * numHands;
