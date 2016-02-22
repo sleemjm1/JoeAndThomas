@@ -30,20 +30,12 @@ namespace CardDealer
 
             try
             {
+                numCards = Int32.Parse(txtNumCards.Text);
                 numHands = Int32.Parse(txtNumHands.Text);
             }
             catch(FormatException)
             {
-                MessageBox.Show("Only Numeric values accepted for No. of Cards", "Format Exception");
-            }
-            
-            try
-            {
-                numCards = Int32.Parse(txtNumCards.Text);
-            }
-            catch(FormatException)
-            {
-                MessageBox.Show("Only Numeric values accepted for Cards Per Hand", "Format Exception");
+                MessageBox.Show("Only Numeric values accepted.", "Format Exception");
             }
             
             int totalCards = numCards * numHands;
